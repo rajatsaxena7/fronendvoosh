@@ -242,7 +242,6 @@ const ChatBot = () => {
                                 ));
                                 setIsStreaming(false);
                                 setIsTyping(false);
-                                // Refresh sidebar to show updated session history
                                 refreshSidebar();
                                 return;
                             }
@@ -287,7 +286,6 @@ const ChatBot = () => {
         const messageToSend = inputMessage;
         setInputMessage('');
 
-        // Refresh sidebar after a short delay to show the new user message
         setTimeout(() => {
             refreshSidebar();
         }, 500);
